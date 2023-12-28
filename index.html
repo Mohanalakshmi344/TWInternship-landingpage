@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FutureSkills</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="logo.jpg" class="logo" />
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Courses</a></li>
+            <li><a href="#contact">Contact&Register</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-bars" onclick="openmenu()"> </i>
+        </nav>
+      </div>
+      <div class="header-text">
+        <h1><span>FutureSkills</span></h1>
+        <p>Learn Without Limit</p>
+      </div>
+    </div>
+    <hr />
+    <!--------------------------------ABOUT------------------------------------------------->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="student.jfif" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Us</h1>
+            <p>
+              At FutureSkills,we all are Learners and Instructors.Whether you
+              want to learn or to share hat you know,you've come to
+              rightplace.As a global destination for online learning,We empower
+              organizations and individuals with flexible and effective skill
+              development.We help you to success in your career.FutureSkills
+              partners with more than 275 leading universities and companies to
+              bring flexible, affordable, job-relevant online learning to
+              individuals and organizations worldwide. We offer a range of
+              learning opportunities—from hands-on projects and courses to
+              job-ready certificates and degree programs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--------------------courses-------------------->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">Courses</h1>
+        <div class="worklist">
+          <div class="work">
+            <img src="ai.jpg" />
+            <div class="layer">
+              <h3>Artificial Intelligence</h3>
+              <p>
+                Artificial intelligence opens a path for other new technologies,
+                new devices, and new Opportunities.
+              </p>
+              <a href="#"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="ds.jpg" />
+            <div class="layer">
+              <h3>Data Science</h3>
+              <p>
+                Data science is a deep study of the massive amount of data,
+                which involves extracting meaningful insights from raw,
+                structured, and unstructured data that is processed using the
+                scientific method, different technologies, and algorithms.
+              </p>
+              <a href="#"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="bs.jfif" />
+            <div class="layer">
+              <h3>Buisness Studies</h3>
+              <p>
+                Business studies is a field of study that deals with the
+                principles of business.
+              </p>
+              <a href="#"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">Explore more</a>
+      </div>
+    </div>
+    <!--------------------------------contact-------------------------->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i>futureskills@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i>9876543210</p>
+            <div class="social-icons">
+              <a href="https://facebook.com/"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="https://twitter.com/"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a href="https://instagram.com/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="contact-right">
+            <form>
+              <input type="text" name="Name" placeholder="your name" required />
+              <input
+                type="text"
+                name="email"
+                placeholder="your email"
+                required
+              />
+              <input
+                type="text"
+                name="password"
+                placeholder="your password"
+                required
+              />
+              <button type="submit" class="btn btn2">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------------------------Javascript------------------------------------------->
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("s");
+        }
+        event.currentTarget.classList.add("active");
+        document.getElementById(tabname).classList.add("s");
+      }
+    </script>
+    <script>
+      var sidemen = document.getElementById("sidemenu");
+      function openmenu() {
+        sidemen.style.right = "0";
+      }
+      function closemenu() {
+        sidemen.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>
